@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/listen", "destination": "/doab_listen_page.html" },
+    { "source": "/library", "destination": "/doab_breastie_library_v2.html" },
+    { "source": "/programs", "destination": "/doab_wellness_programs_v2.html" },
+    { "source": "/newsletter", "destination": "/doab_newsletter.html" },
+    { "source": "/about", "destination": "/doab_about.html" },
+    { "source": "/work-with-me", "destination": "/doab_work_with_me_v2.html" }
+  ]
+}
