@@ -24,7 +24,7 @@
     body { font-family: 'DM Sans', sans-serif; color: #1a1a1a; background: #fff; }
     .page-wrapper { margin: 0 auto; background: #fff; padding-top: 52px; }
 
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px max(28px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; position: fixed; top: 0; left: 0; width: 100%; background: #fff; z-index: 100; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 28px; max-width: 960px; margin: 0 auto; border-bottom: 0.5px solid #e0e0e0; position: fixed; top: 0; left: 0; width: 100%; background: #fff; z-index: 100; }
     .nav-logo { font-family: 'DM Serif Display', serif; font-size: 15px; text-decoration: none; color: #1a1a1a; }
     .nav-logo span { font-style: italic; color: #D85A8A; }
     .nav-links { display: flex; gap: 20px; list-style: none; font-size: 13px; color: #666; }
@@ -37,14 +37,14 @@
     .nav-right { display: flex; align-items: center; gap: 16px; }
     .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; border-radius: 2px; }
 
-    .about-hero { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 0.5px solid #e0e0e0; }
-    .about-left { padding: 48px max(36px, calc((100% - 480px) / 2)); animation: fadeInUp 0.6s ease; }
+    .about-hero { display: grid; grid-template-columns: 1fr 1fr; max-width: 960px; margin: 0 auto; border-bottom: 0.5px solid #e0e0e0; }
+    .about-left { padding: 48px 36px; animation: fadeInUp 0.6s ease; }
     .page-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
     .page-h1 { font-family: 'DM Serif Display', serif; font-size: 36px; line-height: 1.15; margin-bottom: 18px; }
     .page-h1 em { font-style: italic; color: #D85A8A; }
     .about-body { font-size: 14px; color: #555; line-height: 1.8; }
     .about-body p { margin-bottom: 14px; }
-    .about-right { background: #FCF0F5; padding: 48px max(36px, calc((100% - 480px) / 2)); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; animation: fadeInUp 0.6s ease 0.15s both; }
+    .about-right { background: #FCF0F5; padding: 48px 36px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; animation: fadeInUp 0.6s ease 0.15s both; }
     .host-avatar { width: 100px; height: 100px; border-radius: 50%; background: #F4C0D1; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-family: 'DM Serif Display', serif; font-size: 32px; color: #993356; }
     .host-name { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 4px; }
     .host-title { font-size: 13px; color: #D85A8A; margin-bottom: 16px; }
@@ -53,13 +53,13 @@
     .social-btn { padding: 7px 14px; border-radius: 20px; font-size: 12px; border: 0.5px solid #e0e0e0; cursor: pointer; font-family: 'DM Sans', sans-serif; background: white; color: #666; transition: all 0.3s ease; }
     .social-btn:hover { border-color: #D85A8A; color: #D85A8A; transform: scale(1.05); }
 
-    .mission-section { padding: 40px max(32px, calc((100% - 960px) / 2)); background: #f7f7f5; border-bottom: 0.5px solid #e0e0e0; }
+    .mission-section { padding: 40px 32px; max-width: 960px; margin: 0 auto; background: #f7f7f5; border-bottom: 0.5px solid #e0e0e0; }
     .mission-inner { max-width: 640px; margin: 0 auto; text-align: center; }
     .mission-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
     .mission-quote { font-family: 'DM Serif Display', serif; font-size: 26px; line-height: 1.4; font-style: italic; margin-bottom: 12px; }
     .mission-body { font-size: 13px; color: #666; line-height: 1.7; }
 
-    .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 0.5px solid #e0e0e0; }
+    .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 960px; margin: 0 auto; border-bottom: 0.5px solid #e0e0e0; }
     .value-item { padding: 28px 22px; border-right: 0.5px solid #e0e0e0; transition: background 0.3s ease; }
     .value-item:last-child { border-right: none; }
     .value-item:hover { background: #fafafa; }
@@ -67,7 +67,7 @@
     .value-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
     .value-desc { font-size: 12px; color: #666; line-height: 1.5; }
 
-    .section { padding: 36px max(32px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; }
+    .section { padding: 36px 32px; max-width: 960px; margin: 0 auto; border-bottom: 0.5px solid #e0e0e0; }
     .section-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 8px; }
     .section-title { font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 6px; }
     .section-sub { font-size: 13px; color: #666; margin-bottom: 28px; }
@@ -97,7 +97,7 @@
     .contact-link { font-size: 12px; color: #D85A8A; font-weight: 500; cursor: pointer; transition: color 0.2s ease; }
     .contact-link:hover { color: #993356; }
 
-    .form-section { padding: 36px max(32px, calc((100% - 960px) / 2)); max-width: 700px; margin: 0 auto; }
+    .form-section { padding: 36px 32px; max-width: 960px; margin: 0 auto; max-width: 700px; margin: 0 auto; }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .form-full { grid-column: 1 / -1; }
     .form-label { font-size: 12px; color: #666; margin-bottom: 5px; display: block; }
@@ -109,7 +109,7 @@
     .form-submit:hover { background: #c44d7a; transform: scale(1.03); }
 
     /* FOOTER */
-    .footer { padding: 24px max(32px, calc((100% - 960px) / 2)); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
+    .footer { padding: 24px 32px; max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
     .footer-logo { font-family: 'DM Serif Display', serif; font-size: 15px; color: #1a1a1a; text-decoration: none; }
     .footer-logo span { font-style: italic; color: #D85A8A; }
     .footer-links { display: flex; gap: 16px; }
