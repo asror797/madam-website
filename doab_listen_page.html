@@ -24,7 +24,7 @@
     body { font-family: 'DM Sans', sans-serif; color: #1a1a1a; background: #fff; }
     .page-wrapper { margin: 0 auto; background: #fff; padding-top: 52px; }
 
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 28px; max-width: 960px; margin: 0 auto; border-bottom: 0.5px solid #e0e0e0; position: fixed; top: 0; left: 0; width: 100%; background: #fff; z-index: 100; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px max(28px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; position: fixed; top: 0; left: 0; width: 100%; background: #fff; z-index: 100; }
     .nav-logo { font-family: 'DM Serif Display', serif; font-size: 15px; text-decoration: none; color: #1a1a1a; }
     .nav-logo span { font-style: italic; color: #D85A8A; }
     .nav-links { display: flex; gap: 20px; list-style: none; font-size: 13px; color: #666; }
@@ -49,7 +49,7 @@
     .platform-btn.youtube { background: #FF0000; color: white; border-color: #FF0000; }
     .platform-btn.amazon { background: #232F3E; color: white; border-color: #232F3E; }
 
-    .section { padding: 36px 32px; max-width: 960px; margin: 0 auto; border-bottom: 0.5px solid #e0e0e0; }
+    .section { padding: 36px 32px; border-bottom: 0.5px solid #e0e0e0; }
     .section-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 8px; }
     .section-title { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 6px; }
     .section-sub { font-size: 13px; color: #666; margin-bottom: 24px; }
