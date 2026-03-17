@@ -36,7 +36,7 @@
     .nav-right { display: flex; align-items: center; gap: 16px; }
     .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; border-radius: 2px; }
 
-    .page-hero { padding: 52px 32px 44px; max-width: 960px; margin: 0 auto; background: #FCF0F5; border-bottom: 0.5px solid #e0e0e0; text-align: center; animation: fadeInUp 0.6s ease;  max-width: 960px; margin: 0 auto; }
+    .page-hero { padding: 52px max(32px, calc((100% - 960px) / 2)) 44px; background: #FCF0F5; border-bottom: 0.5px solid #e0e0e0; text-align: center; animation: fadeInUp 0.6s ease; }
     .page-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
     .page-h1 { font-family: 'DM Serif Display', serif; font-size: 40px; line-height: 1.1; margin-bottom: 14px; }
     .page-h1 em { font-style: italic; color: #D85A8A; }
@@ -48,7 +48,8 @@
     .btn-outline { background: transparent; color: #1a1a1a; border: 0.5px solid #aaa; }
     .btn-outline:hover { border-color: #D85A8A; color: #D85A8A; transform: scale(1.03); }
 
-    .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 0.5px solid #e0e0e0; }
+    .ways-wrap { border-bottom: 0.5px solid #e0e0e0; }
+    .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 960px; margin: 0 auto; }
     .way-card { padding: 36px 28px; border-right: 0.5px solid #e0e0e0; transition: background 0.3s ease; }
     .way-card:last-child { border-right: none; }
     .way-card.featured { background: #FCF0F5; }
@@ -62,7 +63,8 @@
     .way-cta { font-size: 13px; color: #D85A8A; font-weight: 500; cursor: pointer; background: none; border: none; font-family: 'DM Sans', sans-serif; padding: 0; transition: color 0.2s ease; }
     .way-cta:hover { color: #993356; }
 
-    .booking-section { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 0.5px solid #e0e0e0; }
+    .booking-wrap { border-bottom: 0.5px solid #e0e0e0; }
+    .booking-section { display: grid; grid-template-columns: 1fr 1fr; max-width: 960px; margin: 0 auto; }
     .booking-left { padding: 44px 36px; }
     .sec-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
     .sec-h { font-family: 'DM Serif Display', serif; font-size: 28px; line-height: 1.2; margin-bottom: 12px; }
@@ -73,7 +75,7 @@
     .booking-note-h { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
     .booking-note-body { font-size: 13px; color: #555; line-height: 1.6; }
 
-    .form-section { padding: 36px 32px; border-bottom: 0.5px solid #e0e0e0; }
+    .form-section { padding: 36px max(32px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 620px; }
     .form-full { grid-column: 1 / -1; }
     .form-label { font-size: 12px; color: #666; margin-bottom: 5px; display: block; }
@@ -85,7 +87,7 @@
     .form-submit:hover { background: #c44d7a; transform: scale(1.03); }
 
     /* FOOTER */
-    .footer { padding: 24px 32px; max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
+    .footer { padding: 24px max(32px, calc((100% - 960px) / 2)); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
     .footer-logo { font-family: 'DM Serif Display', serif; font-size: 15px; color: #1a1a1a; text-decoration: none; }
     .footer-logo span { font-style: italic; color: #D85A8A; }
     .footer-links { display: flex; gap: 16px; }
@@ -104,7 +106,7 @@
       .nav-right { gap: 10px; }
       .nav-cta { font-size: 11px; padding: 6px 12px; }
       .nav { padding: 12px 20px; }
-      .page-hero { padding: 36px 20px;  max-width: 960px; margin: 0 auto; }
+      .page-hero { padding: 36px 20px; }
       .page-h1 { font-size: 30px; }
       .ways-grid { grid-template-columns: 1fr; }
       .way-card { border-right: none; border-bottom: 0.5px solid #e0e0e0; padding: 28px 20px; }
@@ -118,7 +120,7 @@
     }
     @media (max-width: 480px) {
       .page-h1 { font-size: 26px; }
-      .page-hero { padding: 28px 16px;  max-width: 960px; margin: 0 auto; }
+      .page-hero { padding: 28px 16px; }
       .way-card { padding: 24px 16px; }
       .booking-left { padding: 24px 16px; }
       .booking-right { padding: 24px 16px; }
@@ -156,6 +158,7 @@
   </div>
 </div>
 
+<div class="ways-wrap">
 <div class="ways-grid">
   <div class="way-card featured">
     <div class="way-icon">🌿</div>
@@ -179,7 +182,9 @@
     <button class="way-cta">Explore partnerships →</button>
   </div>
 </div>
+</div>
 
+<div class="booking-wrap">
 <div class="booking-section">
   <div class="booking-left">
     <div class="sec-eyebrow">Start here</div>
@@ -191,6 +196,7 @@
     <div class="booking-note-h">What to expect</div>
     <div class="booking-note-body">This is a low-pressure conversation where we get to know each other, discuss your goals, and figure out the best path forward — whether that's coaching, a speaking engagement, or a brand collaboration. No commitment required.</div>
   </div>
+</div>
 </div>
 
 <div class="form-section">

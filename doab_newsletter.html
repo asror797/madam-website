@@ -37,7 +37,8 @@
     .nav-right { display: flex; align-items: center; gap: 16px; }
     .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; border-radius: 2px; }
 
-    .hero-split { display: grid; grid-template-columns: 1fr 1fr; max-width: 960px; margin: 0 auto; min-height: 320px; border-bottom: 0.5px solid #e0e0e0; }
+    .hero-split-wrap { background: linear-gradient(to right, #f7f7f5 50%, #FCF0F5 50%); border-bottom: 0.5px solid #e0e0e0; }
+    .hero-split { display: grid; grid-template-columns: 1fr 1fr; max-width: 960px; margin: 0 auto; min-height: 320px; }
     .hero-left { padding: 48px 36px; background: #f7f7f5; animation: fadeInUp 0.6s ease; }
     .page-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
     .page-h1 { font-family: 'DM Serif Display', serif; font-size: 36px; line-height: 1.15; margin-bottom: 14px; }
@@ -60,7 +61,7 @@
     .subscribe-btn:hover { background: #c44d7a; transform: scale(1.02); }
     .privacy-note { font-size: 11px; color: #666; text-align: center; margin-top: 10px; }
 
-    .section { padding: 36px 32px; border-bottom: 0.5px solid #e0e0e0; }
+    .section { padding: 36px max(32px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; }
     .section-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 8px; }
     .section-title { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 6px; }
     .section-sub { font-size: 13px; color: #666; margin-bottom: 24px; }
@@ -83,7 +84,7 @@
     .testi-name { font-size: 12px; color: #D85A8A; }
 
     /* FOOTER */
-    .footer { padding: 24px 32px; max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
+    .footer { padding: 24px max(32px, calc((100% - 960px) / 2)); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
     .footer-logo { font-family: 'DM Serif Display', serif; font-size: 15px; color: #1a1a1a; text-decoration: none; }
     .footer-logo span { font-style: italic; color: #D85A8A; }
     .footer-links { display: flex; gap: 16px; }
@@ -140,6 +141,7 @@
     </div>
 </nav>
 
+<div class="hero-split-wrap">
 <div class="hero-split">
   <div class="hero-left">
     <div class="page-eyebrow">The Newsletter</div>
@@ -163,6 +165,7 @@
       <div class="privacy-note">Your information is safe. We respect your privacy.</div>
     </div>
   </div>
+</div>
 </div>
 
 <div class="section">

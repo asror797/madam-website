@@ -37,7 +37,8 @@
     .nav-right { display: flex; align-items: center; gap: 16px; }
     .hamburger span { display: block; width: 24px; height: 2px; background: #1a1a1a; border-radius: 2px; }
 
-    .about-hero { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 0.5px solid #e0e0e0; }
+    .about-hero-wrap { background: linear-gradient(to right, #fff 50%, #FCF0F5 50%); border-bottom: 0.5px solid #e0e0e0; }
+    .about-hero { display: grid; grid-template-columns: 1fr 1fr; max-width: 960px; margin: 0 auto; }
     .about-left { padding: 48px 36px; animation: fadeInUp 0.6s ease; }
     .page-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
     .page-h1 { font-family: 'DM Serif Display', serif; font-size: 36px; line-height: 1.15; margin-bottom: 18px; }
@@ -53,13 +54,14 @@
     .social-btn { padding: 7px 14px; border-radius: 20px; font-size: 12px; border: 0.5px solid #e0e0e0; cursor: pointer; font-family: 'DM Sans', sans-serif; background: white; color: #666; transition: all 0.3s ease; }
     .social-btn:hover { border-color: #D85A8A; color: #D85A8A; transform: scale(1.05); }
 
-    .mission-section { padding: 40px 32px; max-width: 960px; margin: 0 auto; background: #f7f7f5; border-bottom: 0.5px solid #e0e0e0; }
+    .mission-section { padding: 40px max(32px, calc((100% - 960px) / 2)); background: #f7f7f5; border-bottom: 0.5px solid #e0e0e0; }
     .mission-inner { max-width: 640px; margin: 0 auto; text-align: center; }
     .mission-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 10px; }
     .mission-quote { font-family: 'DM Serif Display', serif; font-size: 26px; line-height: 1.4; font-style: italic; margin-bottom: 12px; }
     .mission-body { font-size: 13px; color: #666; line-height: 1.7; }
 
-    .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 0.5px solid #e0e0e0; }
+    .values-wrap { border-bottom: 0.5px solid #e0e0e0; }
+    .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 960px; margin: 0 auto; }
     .value-item { padding: 28px 22px; border-right: 0.5px solid #e0e0e0; transition: background 0.3s ease; }
     .value-item:last-child { border-right: none; }
     .value-item:hover { background: #fafafa; }
@@ -67,7 +69,7 @@
     .value-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
     .value-desc { font-size: 12px; color: #666; line-height: 1.5; }
 
-    .section { padding: 36px 32px; border-bottom: 0.5px solid #e0e0e0; }
+    .section { padding: 36px max(32px, calc((100% - 960px) / 2)); border-bottom: 0.5px solid #e0e0e0; }
     .section-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #D85A8A; margin-bottom: 8px; }
     .section-title { font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 6px; }
     .section-sub { font-size: 13px; color: #666; margin-bottom: 28px; }
@@ -97,7 +99,7 @@
     .contact-link { font-size: 12px; color: #D85A8A; font-weight: 500; cursor: pointer; transition: color 0.2s ease; }
     .contact-link:hover { color: #993356; }
 
-    .form-section { padding: 36px 32px; max-width: 960px; margin: 0 auto; max-width: 700px; margin: 0 auto; }
+    .form-section { padding: 36px max(32px, calc((100% - 960px) / 2)); }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .form-full { grid-column: 1 / -1; }
     .form-label { font-size: 12px; color: #666; margin-bottom: 5px; display: block; }
@@ -109,7 +111,7 @@
     .form-submit:hover { background: #c44d7a; transform: scale(1.03); }
 
     /* FOOTER */
-    .footer { padding: 24px 32px; max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
+    .footer { padding: 24px max(32px, calc((100% - 960px) / 2)); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #888; border-top: 0.5px solid #e0e0e0; }
     .footer-logo { font-family: 'DM Serif Display', serif; font-size: 15px; color: #1a1a1a; text-decoration: none; }
     .footer-logo span { font-style: italic; color: #D85A8A; }
     .footer-links { display: flex; gap: 16px; }
@@ -175,6 +177,7 @@
     </div>
 </nav>
 
+<div class="about-hero-wrap">
 <div class="about-hero">
   <div class="about-left">
     <div class="page-eyebrow">About</div>
@@ -198,6 +201,7 @@
     </div>
   </div>
 </div>
+</div>
 
 <div class="mission-section">
   <div class="mission-inner">
@@ -207,11 +211,13 @@
   </div>
 </div>
 
+<div class="values-wrap">
 <div class="values-grid">
   <div class="value-item"><div class="value-icon">🤍</div><div class="value-title">Authentic storytelling</div><div class="value-desc">We tell real stories without filters — the hard parts, the healing, and everything in between.</div></div>
   <div class="value-item"><div class="value-icon">🌿</div><div class="value-title">Whole-body wellness</div><div class="value-desc">Healing is physical, emotional, and spiritual. We honor all of it.</div></div>
   <div class="value-item"><div class="value-icon">✝️</div><div class="value-title">Faith-grounded</div><div class="value-desc">Faith isn't a backdrop here — it's woven into how we approach healing, purpose, and community.</div></div>
   <div class="value-item"><div class="value-icon">👩🏾‍🤝‍👩🏽</div><div class="value-title">Community first</div><div class="value-desc">No survivor should walk her journey alone. We build spaces where women show up for each other.</div></div>
+</div>
 </div>
 
 <div class="section">
